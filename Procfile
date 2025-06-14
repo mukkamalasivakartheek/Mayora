@@ -1,1 +1,1 @@
-web: gunicorn Mayora.wsgi:application
+web: gunicorn Mayora.wsgi
