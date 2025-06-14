@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us | Mayora{% endblock %}
+
+{% block content %}
+<style>
+  .contact-section {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    padding: 60px 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 60px auto;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+  }
+
+  .contact-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-section label {
+    font-weight: bold;
+  }
+
+  .contact-section input,
+  .contact-section textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ccc;
+    color: white;
+  }
+
+  .contact-section input::placeholder,
+  .contact-section textarea::placeholder {
+    color: #ccc;
+  }
+
+  .contact-section input:focus,
+  .contact-section textarea:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+
+  .contact-section .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .contact-section .btn-primary:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<div class="contact-section">
+  <h1>Contact Us</h1>
+  <p class="text-center mb-4">We’d love to hear from you! Reach out with any questions, feedback, or project ideas.</p>
+
+  <form method="post" action="{% url 'contactus' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="name">Your Name</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Email Address</label>
+      <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="message">Your Message</label>
+      <textarea class="form-control" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary px-5">Send Message</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

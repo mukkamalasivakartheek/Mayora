@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services - Mayora{% endblock %}
+
+{% block content %}
+<section class="container my-5 pt-5">
+  <h2 class="text-center mb-5">Our Services</h2>
+  <div class="row g-4">
+    <!-- Service 1 -->
+    <div class="col-md-4">
+      <a href="{% url 'social_media' %}" class="text-decoration-none">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7);">
+          <div class="card-body">
+            <h5 class="card-title">Social Media Management</h5>
+            <p class="card-text">Grow your brand with strategic content, posting, and audience engagement.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="col-md-4">
+      <a href="{% url 'web_dev' %}" class="text-decoration-none">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7);">
+          <div class="card-body">
+            <h5 class="card-title">Website Development</h5>
+            <p class="card-text">Build responsive, user-friendly websites that reflect your brand identity.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="col-md-4">
+      <a href="{% url 'creative_design' %}" class="text-decoration-none">
+        <div class="card text-white" style="background-color: rgba(0, 0, 0, 0.7);">
+          <div class="card-body">
+            <h5 class="card-title">Creative Design</h5>
+            <p class="card-text">Eye-catching designs tailored to your business—from logos to campaigns.</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

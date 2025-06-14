@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | Mayora{% endblock %}
+
+{% block content %}
+<style>
+  /* Hero Section */
+  .hero-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .hero-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    padding: 20px;
+  }
+
+  /* Main Content */
+  .main-content {
+    position: relative;
+    z-index: 10;
+    padding-top: 100vh;
+    background-color: rgba(0, 0, 0, 0.2); /* Subtle background for contrast */
+    color: white;
+  }
+
+  /* Glass Cards */
+  .glass-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 60px 0;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+    max-width: 600px;
+  }
+
+  .section-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-row.left .glass-section {
+    margin-right: auto;
+  }
+
+  .section-row.right .glass-section {
+    margin-left: auto;
+  }
+
+  @media (max-width: 768px) {
+    .section-row {
+      flex-direction: column;
+    }
+
+    .glass-section {
+      margin: 30px auto;
+    }
+  }
+</style>
+
+<!-- Fixed Video Background -->
+<div class="hero-section">
+  <video autoplay muted loop>
+    <source src="{% static 'app/videos/home.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-overlay">
+    <h1>Empowering Brands with Creativity & Strategy</h1>
+  </div>
+</div>
+
+<!-- Scrollable Content -->
+<div class="main-content">
+  <div class="container">
+
+    <div class="section-row left">
+      <div class="glass-section">
+        <h2>Who We Are</h2>
+        <p>Mayora is a team of visionaries, strategists, and creative minds dedicated to transforming the way businesses connect with their audiences. We deliver exceptional value through personalized solutions, ensuring every campaign drives meaningful results.</p>
+      </div>
+    </div>
+
+    <div class="section-row right">
+      <div class="glass-section">
+        <h2>Our Clients</h2>
+        <p>We proudly collaborate with a diverse range of businesses — from ambitious startups to global enterprises — ensuring every brand’s voice is heard and felt through meaningful digital presence and creative storytelling.</p>
+      </div>
+    </div>
+
+    <div class="section-row left">
+      <div class="glass-section">
+        <h2>About Us</h2>
+        <p>At Mayora, we believe in building relationships, not just campaigns. Our approach merges deep market insights with bold design and modern technologies to empower brands to make a lasting impact.</p>
+      </div>
+    </div>
+
+    <div class="section-row right">
+      <div class="glass-section">
+        <h2>Our Achievements</h2>
+        <ul>
+          <li><strong>Team Size:</strong> 25+ highly skilled professionals</li>
+          <li><strong>Active Customers:</strong> Over 100 brands served</li>
+          <li><strong>Success Rate:</strong> 95% client retention and satisfaction</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}

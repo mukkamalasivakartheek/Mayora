@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us | Mayora{% endblock %}
+
+{% block content %}
+<style>
+  .about-section {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    padding: 60px 30px;
+    padding-top: 240px; /* Ensures content starts below navbar */
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+  }
+
+  .about-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+  }
+
+  .about-section ul {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+
+  .about-section ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+  }
+</style>
+
+<div class="about-section">
+  <h1>About Us</h1>
+  <p>
+    Mayora is not just an agency — we are your creative partner in crafting brand stories that resonate, engage, and inspire...
+  </p>
+
+  <p>
+    With a team of 25+ professionals including strategists, designers, developers, and storytellers...
+  </p>
+
+  <h2>What Drives Us</h2>
+  <ul>
+    <li><strong>Creativity:</strong> Unique ideas that turn heads and win hearts.</li>
+    <li><strong>Collaboration:</strong> Working hand-in-hand with clients to bring visions to life.</li>
+    <li><strong>Excellence:</strong> Commitment to quality, innovation, and results.</li>
+    <li><strong>Integrity:</strong> Transparent and ethical practices that build trust and long-term success.</li>
+  </ul>
+
+  <p>
+    At Mayora, we don’t just deliver services — we deliver impact...
+  </p>
+</div>
+{% endblock %}

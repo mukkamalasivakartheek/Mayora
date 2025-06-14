@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Website Development | Mayora{% endblock %}
+
+{% block content %}
+<style>
+  .glass-container {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    border-radius: 15px;
+    padding: 50px;
+    margin: 60px auto;
+    max-width: 900px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-container h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+</style>
+
+<div class="glass-container">
+  <h1>Website Development</h1>
+  <p>Mayora builds responsive, secure, and engaging websites tailored to your brand and business goals. Whether it’s a landing page or a full-scale e-commerce platform, we bring your digital vision to life with design and functionality in harmony.</p>
+  <ul>
+    <li>Custom UI/UX design</li>
+    <li>Mobile-first responsive development</li>
+    <li>SEO-friendly architecture</li>
+    <li>CMS integration (WordPress, Django, etc.)</li>
+    <li>Ongoing support and maintenance</li>
+  </ul>
+</div>
+{% endblock %}

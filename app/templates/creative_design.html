@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Creative Design | Mayora{% endblock %}
+
+{% block content %}
+<style>
+  .glass-container {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    border-radius: 15px;
+    padding: 50px;
+    margin: 60px auto;
+    max-width: 900px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-container h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+</style>
+
+<div class="glass-container">
+  <h1>Creative Design</h1>
+  <p>Our creative design services turn ideas into captivating visual experiences. From brand identity to social media graphics, Mayora crafts compelling visuals that reflect your unique story and engage your audience.</p>
+  <ul>
+    <li>Logo and brand identity design</li>
+    <li>Marketing collateral (flyers, brochures, banners)</li>
+    <li>Social media post & ad creatives</li>
+    <li>Packaging and print design</li>
+    <li>Motion graphics & animation</li>
+  </ul>
+</div>
+{% endblock %}
